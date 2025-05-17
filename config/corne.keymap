@@ -8,12 +8,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 
-&led_strip {
-
-  chain-length = <27>; // 21 backlight + 6 underglow
-
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
 };
+
+&led_strip { chain-length = <42>; };
 
 / {
         keymap {
