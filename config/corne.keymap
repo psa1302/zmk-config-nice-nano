@@ -10,21 +10,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/ {
-    backlight: pwmleds {
-        compatible = "pwm-leds";
-        pwm_led_0 {
-            pwms = <&pwm0 0 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
-        };
-    };
-};
-
-/ {
-    chosen {
-        zmk,backlight = &backlight;
-    };
-};
-
 &led_strip { chain-length = <27>; };
 
 / {
